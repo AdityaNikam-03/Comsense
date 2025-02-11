@@ -13,10 +13,10 @@ public class Bank {
 	
 	void showDetails()
 	{
-		System.out.println("****** Holder Details ******");
-		System.out.println("                 Name :"+Name);
-		System.out.println("            Account Number :"+accno);
-		System.out.println("*****************");
+		System.out.println("\n"+"******* User Details *******");
+		System.out.println("       Name :"+Name);
+		System.out.println("   Account Number :"+accno);
+		System.out.println("****************************");
 	}
 	
 	void withdraw(double Amount)
@@ -28,7 +28,7 @@ public class Bank {
 			}
 			else {
 				this.balance-=Amount;
-				System.out.println(Amount+"debitted Successfully and balance is"+this.balance);
+				System.out.println(Amount+" debited Successfully and balance is : "+this.balance);
 			}
 		}catch(InsufficientFundsException IFE)
 		{
@@ -45,7 +45,7 @@ public class Bank {
 			}
 			else {
 				this.balance+=Amount;
-				System.out.println(Amount+"creditted to your ac and balance is :"+this.balance);
+				System.out.println(Amount+" credited to your account and balance is : "+this.balance);
 			}
 		}catch(InvalidAmountException IAE)
 		{
@@ -55,6 +55,6 @@ public class Bank {
 	
 	void showBalance()
 	{
-		System.out.println("Your Account Balance is :"+this.balance);
+		System.out.println("Your Account Balance is : "+this.balance);
 	}
 }
