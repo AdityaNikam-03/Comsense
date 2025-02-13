@@ -14,7 +14,7 @@ public class UpdateStudentData {
 		System.out.println("Connection Success..!");
 		try {
 			ResultSet rs=con.prepareStatement("select * from Student;").executeQuery();
-			if(!rs.isBeforeFirst()) {
+			if(!rs.next()) {
 				System.out.println("Database is Empty...!"+"\n");
 				return;
 			}

@@ -10,13 +10,13 @@ import java.sql.ResultSet;
 public class InsertStudent {
 	public void add(){
 		Student s=new Student();
-		Connection con=DbConnection.connect();;
+		Connection con=DbConnection.connect();
 		
 		System.out.println("Connection Success..!");
 		PreparedStatement stmt;
 		try {
-			
-			ResultSet rs=con.prepareStatement("select * from Student;").executeQuery();
+			stmt=con.prepareStatement("select * from Student;");
+			ResultSet rs=stmt.executeQuery();
 			
 			while(rs.next()) {
 				if(s.id==rs.getInt(1)) {
